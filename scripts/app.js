@@ -63,4 +63,18 @@ cityForm.addEventListener("submit", (e) => {
     .catch((err) => {
       console.log(err);
     });
+
+  // set localstorage of city name
+
+  localStorage.setItem("city", city);
 });
+
+if (localStorage.getItem("city")) {
+  newCity(localStorage.getItem("city"))
+    .then((data) => {
+      updateUI(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
