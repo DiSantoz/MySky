@@ -1,4 +1,4 @@
-const key = "HEB7FwuMX1r2r2fNSwqb9xYCyI5scy8t";
+const key = "QSvO9DYi40y4N0f0JgvO6YAh4tE8Plky";
 
 // get weather information
 const getWeather = async (id) => {
@@ -13,8 +13,7 @@ const getWeather = async (id) => {
 
 // get city information
 const getCity = async (city) => {
-  const base =
-    "http://dataservice.accuweather.com/locations/v1/cities/autocomplete";
+  const base = "http://dataservice.accuweather.com/locations/v1/cities/search";
 
   const query = `?apikey=${key}&q=${city}`;
 
